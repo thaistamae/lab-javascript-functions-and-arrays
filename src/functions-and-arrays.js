@@ -34,9 +34,23 @@ function sumNumbers(someArr){
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
-
-
+function sum(someArr) {
+  let sumValue = 0; 
+  for(let i = 0; i < someArr.length; i++){
+    if(typeof someArr[i] === "number"){
+      sumValue += someArr[i];
+    }else if(typeof someArr[i] === "string"){
+      sumValue += someArr[i].length;
+    }else if(typeof someArr[i] === "boolean"){
+      if(someArr[i] == true){
+        sumValue += 1;
+      }else if (someArr[i] == false){
+        sumValue += 0;
+      }
+    }    
+  }
+  return sumValue;
+}
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
@@ -60,7 +74,23 @@ function averageWordLength(wordsArray) {
 
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(arr){
+  let sumValue = 0; 
+  for(let i = 0; i < arr.length; i++){
+    if(typeof arr[i] === "number"){
+      sumValue += arr[i];
+    }else if(typeof arr[i] === "string"){
+      sumValue += arr[i].length;
+    }else if(typeof arr[i] === "boolean"){
+      if(arr[i] == true){
+        sumValue += 1;
+      }else if (arr[i] == false){
+        sumValue += 0;
+      }
+    }    
+  }
+  return sumValue / arr.length;
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
